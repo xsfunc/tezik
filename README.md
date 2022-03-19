@@ -1,9 +1,12 @@
-## Install
+## Demo
+https://tezik.vercel.app/profile
 
+## Install
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
+
+For tracking tokens prices use  repo
+[tezik-dipdup](https://github.com/xsfunc/tezik-dipdup)
