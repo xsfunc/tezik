@@ -1,0 +1,33 @@
+overwrite: true
+
+config:
+  namingConvention:
+    typeNames: change-case-all#pascalCase
+    enumValues: change-case-all#upperCase
+
+generates:
+  # src/services/domains-api/generated/graphql.ts:
+  #   documents: "src/services/domains-api/**/*.graphql"
+  #   schema: "https://domains.dipdup.net/v1/graphql"
+  #   hooks:
+  #     afterOneFileWrite:
+  #       - prettier --write
+  #   plugins:
+  #     - typescript
+  #     - typescript-operations
+  #     - typescript-rtk-query:
+  #         importBaseApiFrom: services/domains-api/baseApi
+  #         exportHooks: false
+
+  src/services/dipdup-api/generated/graphql.ts:
+    schema: "http://localhost:8080/v1/graphql"
+    documents: "src/services/dipdup-api/**/*.graphql"
+    hooks:
+      afterOneFileWrite:
+        - prettier --write
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-rtk-query:
+          importBaseApiFrom: services/dipdup-api/baseApi
+          exportHooks: false

@@ -1,0 +1,20 @@
+query GetProfileTokensPrices($tokenAdresses: [String!], $date: timestamptz) {
+  lastPrices: trade(
+    distinct_on: tokenAddress
+    where: { tokenAddress: { _in: $tokenAdresses } }
+    order_by: { tokenAddress: desc, level: desc }
+  ) {
+    lastPrice: price
+    tokenAddress
+    timestamp
+  }
+  historyPrices: trade(
+    distinct_on: tokenAddress
+    where: { tokenAddress: { _in: $tokenAdresses }, timestamp: { _lte: $date } }
+    order_by: { tokenAddress: desc, level: desc }
+  ) {
+    historyPrice: price
+    tokenAddress
+    timestamp
+  }
+}

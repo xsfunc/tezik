@@ -1,0 +1,5 @@
+query GetDomainByAddress($where: domain_bool_exp) {
+  domain(where: $where) {
+    id
+  }
+}

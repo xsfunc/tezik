@@ -1,0 +1,13 @@
+query GetTokenPriceHistory($startDate: timestamptz, $tokenAddress: String) {
+  trade(
+    order_by: { timestamp: desc }
+    where: {
+      timestamp: { _gt: $startDate }
+      tokenAddress: { _eq: $tokenAddress }
+    }
+  ) {
+    level
+    price
+    timestamp
+  }
+}

@@ -1,0 +1,1 @@
+export { useBaseOptionChart } from './useBaseOptionChart'
