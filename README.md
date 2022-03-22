@@ -1,6 +1,7 @@
 # tezik
 
 This project is the front-end of [tezik](https://tezik.vercel.app).
+See also backend part -- [tezik-dipdup](https://github.com/xsfunc/tezik-dipdup).
 The front-end uses [Nextjs](https://nextjs.org/), a React framework.
 
 ## Installation
@@ -34,7 +35,7 @@ NEXT_PUBLIC_NETWORK=mainnet
 
 ```
 
-This will set the front-end to run against the main fxhash API and the contracts on the **mainnet** so **BE CAREFUL**.
+This will set the front-end to run against the main tzkt API and the contracts on the **mainnet** so **BE CAREFUL**.
 
 ## Getting Started
 
